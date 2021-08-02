@@ -27,7 +27,7 @@
     "react-redux": "7.2.4",
     "react-router-dom": "5.2.0",
     "rehype-attr": "1.4.1",
-    "uiw": "4.7.16"
+    "uiw": "4.9.4"
   },
   "devDependencies": {
     "@kkt/less-modules": "6.11.0",

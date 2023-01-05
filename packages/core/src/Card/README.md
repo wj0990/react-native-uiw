@@ -93,30 +93,30 @@ export default Demo
 #### 属性
 ## CardProps
 
-| 属性 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| containerStyle | 外容器样式（可选） | `StyleProp<ViewStyle>` | - |
-| wrapperStyle | 内容器样式（可选） | `StyleProp<ViewStyle>` | - |
-| borderRadius | 设置卡片圆角度数（可选） | `number` | - |
-| selected | 是否选中（可选） | `boolean` | - |
-| children | 渲染内容 | `React.ReactNode` | - |
-| onPress | 按下卡片时的动作（可选） | `TouchableOpacityProps['onPress']` | - |
-| onLongPress | 长按下卡片时的动作（可选） | `TouchableOpacityProps['onLongPress']`  | - |
-| selectedStyle | 自定义选中样式 | `{ icon?: React.ReactNode;style?: ViewStyle}` | - |
+| 属性           | 说明                       | 类型                                          | 默认值 |
+| -------------- | -------------------------- | --------------------------------------------- | ------ |
+| containerStyle | 外容器样式（可选）         | `StyleProp<ViewStyle>`                        | -      |
+| wrapperStyle   | 内容器样式（可选）         | `StyleProp<ViewStyle>`                        | -      |
+| borderRadius   | 设置卡片圆角度数（可选）   | `number`                                      | -      |
+| selected       | 是否选中（可选）           | `boolean`                                     | -      |
+| children       | 渲染内容                   | `React.ReactNode`                             | -      |
+| onPress        | 按下卡片时的动作（可选）   | `TouchableOpacityProps['onPress']`            | -      |
+| onLongPress    | 长按下卡片时的动作（可选） | `TouchableOpacityProps['onLongPress']`        | -      |
+| selectedStyle  | 自定义选中样式             | `{ icon?: React.ReactNode;style?: ViewStyle}` | -      |
 
 ## CardTitleProps
 
-| 属性 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| title | 标题 | `string` | - |
-| titleStyle | 标题样式 | `StyleProp<TextStyle>` | - |
-| children | 自定义标题 | `React.ReactNode` | - |
+| 属性       | 说明       | 类型                   | 默认值 |
+| ---------- | ---------- | ---------------------- | ------ |
+| title      | 标题       | `string`               | -      |
+| titleStyle | 标题样式   | `StyleProp<TextStyle>` | -      |
+| children   | 自定义标题 | `React.ReactNode`      | -      |
 
 ## CardActionsProps
-| 属性 | 说明 | 类型 |  默认值  |
-| --- | --- | --- | --- |
-| actions | 操作 | `Array<{ text?: string; icon?: JSX.Element; onPress?: (e: GestureResponderEvent, index: number) => void; actionsTextStyle?: StyleProp<TextStyle>}>` | - |
-| actionsContainerStyle | 操作容器样式 | `StyleProp<ViewStyle>` | - |
-| children | 自定义操作 | `React.ReactNode` | - |
+| 属性                  | 说明         | 类型                                                                                                                                                | 默认值 |
+| --------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| actions               | 操作         | `Array<{ text?: string; icon?: JSX.Element; onPress?: (e: GestureResponderEvent, index: number) => void; actionsTextStyle?: StyleProp<TextStyle>}>` | -      |
+| actionsContainerStyle | 操作容器样式 | `StyleProp<ViewStyle>`                                                                                                                              | -      |
+| children              | 自定义操作   | `React.ReactNode`                                                                                                                                   | -      |
 
 

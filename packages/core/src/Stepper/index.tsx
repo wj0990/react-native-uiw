@@ -135,7 +135,7 @@ function Stepper(props: StepperProps) {
         color={color}
         value={value + ''}
         onChange={isErrorHandle}
-        disabled={!disabledInput}
+        disabled={disabledInput}
       />
       <ControlValue
         size={size}

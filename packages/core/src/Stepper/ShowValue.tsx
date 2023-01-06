@@ -30,7 +30,7 @@ function ShowValue(props: ShowValueProps) {
   };
   return (
     <TextInput
-      editable={disabled} // 禁用
+      editable={!disabled} // 禁用
       keyboardType="numeric"
       value={value}
       onChangeText={(text) => {

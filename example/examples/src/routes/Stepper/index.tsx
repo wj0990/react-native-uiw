@@ -16,10 +16,7 @@ export interface IndexState {
   value1: number;
   value2: number;
 }
-export default class StepperExample extends React.Component<
-  IndexProps,
-  IndexState
-> {
+export default class StepperExample extends React.Component<IndexProps, IndexState> {
   state = {
     value: 0,
     value1: 2,
@@ -119,7 +116,7 @@ export default class StepperExample extends React.Component<
                 extra={
                   <Stepper
                     disabled={true}
-                    disabledInput={false}
+                    disabledInput={true}
                     value={this.state.value1}
                     onChange={value1 => {
                       this.setState({value1});

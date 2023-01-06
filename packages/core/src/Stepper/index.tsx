@@ -15,7 +15,7 @@ export interface Color {
   valueColor?: string;
 }
 export type Size = 'small' | 'default' | 'large';
-export interface StepProps {
+export interface StepperProps {
   /** 尺寸 */
   size?: Size;
   /** 颜色 */
@@ -44,7 +44,7 @@ export interface StepProps {
   onErrorInput?: (type: 'OVER' | 'LOW', errorValue: number) => void;
 }
 
-function Stepper(props: StepProps) {
+function Stepper(props: StepperProps) {
   const {
     size = 'default',
     color = {

@@ -23,7 +23,7 @@ export interface StepperProps {
   /** input 宽度,不包括两侧按钮 */
   width?: number;
   /** 输入框当前值，开发者需要通过 onChange 事件来更新 value 值，必填 */
-  value: number;
+  value?: number;
   /** 每次点击改变的间隔大小 */
   step?: number;
   /** 最小值 */
@@ -39,7 +39,7 @@ export interface StepperProps {
   /** 长按间隔 单位(ms) */
   delayLong?: number;
   /** 输入框值改变时触发的事件, 必填 */
-  onChange: (value: number) => void;
+  onChange?: (value: number) => void;
   /** 输入框尝试输入错误数据触发的事件	 */
   onErrorInput?: (type: 'OVER' | 'LOW', errorValue: number) => void;
 }
@@ -82,24 +82,24 @@ function Stepper(props: StepperProps) {
   }, [value]);
   const isErrorHandle = (result: number | 'min') => {
     if (result === 'min') {
-      onChange(min);
+      onChange && onChange(min);
       valueRef.current = min;
       return;
     }
     if (Number(result) > max) {
       onErrorInput?.('OVER', result);
-      onChange(max);
+      onChange && onChange(max);
       valueRef.current = max;
       return;
     }
     if (Number(result) < min) {
       onErrorInput?.('LOW', result);
-      onChange(min);
+      onChange && onChange(min);
       valueRef.current = min;
       return;
     }
     valueRef.current = result;
-    onChange(result);
+    onChange && onChange(result);
   };
   const control = (type: 'decrease' | 'increase') => {
     textInput.current && textInput.current.blur();
@@ -115,7 +115,7 @@ function Stepper(props: StepperProps) {
     }
     // valueRef.current = Number(result.toFixed(accuracy.current))
     valueRef.current = result;
-    onChange(valueRef.current);
+    onChange && onChange(valueRef.current);
   };
   return (
     <View style={[ControlStyle.elementCenter, { justifyContent: 'flex-start' }]}>
